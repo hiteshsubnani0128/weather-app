@@ -1,3 +1,4 @@
+const request = require('request');
 const yargs = require('yargs');
 const geocode = require('./geocode/geocode');
 
@@ -13,5 +14,6 @@ const argv = yargs
 .help()
 .alias('help', 'h')
 .argv;
+geocode.geocodeAddress(argv.a);
 
-geocode.geocodeAddress(agrv.a);
+
