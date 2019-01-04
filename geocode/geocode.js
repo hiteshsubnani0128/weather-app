@@ -18,7 +18,7 @@ request({
         callback(undefined, {
             address: body.results[0].formatted_address,
             latitude:body.results[0].geometry.location.lat,
-            longitude : body.results[0].geometry.location.lat
+            longitude : body.results[0].geometry.location.lng
         });
     //console.log(`Address: ${body.results[0].formatted_address}`);
     //console.log(`lat: ${body.results[0].geometry.location.lat}`);
@@ -30,3 +30,4 @@ request({
 module.exports = {
     geocodeAddress
 }
+
